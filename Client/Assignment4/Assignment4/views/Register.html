@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 >Register</h1>
+<div class="content">
+    <form ng-submit="addUser()">
+        <input type="text" ng-model="userName" placeholder="User Name" ng-change="unChange()" />
+        <label ng-model="UnComment" >{{UnComment}}</label>
+        <input type="password" ng-model="password" placeholder="Password" ng-change="pdChange()"/>
+        <label ng-model="pdComment" >{{pdComment}}</label>
+        <input type="text" placeholder="First Name" ng-model="firstName"/>
+        <input type="text" placeholder="Last Name" ng-model="lastName" />
+        <input type="text" placeholder="Address" ng-model="adress"/>
+        <input type="text" placeholder="City" ng-model="city"/>
+        <input type="text" placeholder="Phone Number" ng-model="phoneNo" />
+        <input type="text" placeholder="Cellular" ng-model="cellular"/>
+        <input type="text" placeholder="Credit Card Number" ng-model="ccn"/>
+        <h3>Choose Your Country:</h3>
+        <select ng-model="countrySelected" >
+            <option ng-repeat="c in countries " value="{{c.textContent}}">{{c.textContent}}</option>
+        </select>
+
+
+        <br/>
+        <br/>
+        <label>What's your mother's name?</label>
+        <input type="text" placeholder="Answer" ng-model="answer"/>
+        <h3>Choose your favourite categories:</h3>
+        <br/>
+        <br/>
+        <div ng-repeat="category in categories">
+
+            <label >{{category.CategoryName}}
+            </label>
+            <input type="checkbox" id="barshatz" ng-model="fdsf" ng-change="listChange(category)">
+
+        </div>
+
+        <input type="submit"  value="Register" />
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+ [
+  {
+    "name": "Fifa 17",
+    "belt": "Blue",
+    "rate": 50,
+    "available": true,
+    "thumb": "content/img/fifa17.png"
+  },
+  {
+    "name": "Worms",
+    "belt": "Green",
+    "rate": 10,
+    "available": true,
+    "thumb": "content/img/worms.png"
+  },
+  {
+    "name": "Carmagedon",
+    "belt": "Red",
+    "rate": 15,
+    "available": true,
+    "thumb": "content/img/carmageddon.png"
+  },
+  {
+    "name": "GTA 5",
+    "belt": "Pink",
+    "rate": 8,
+    "available": true,
+    "thumb": "content/img/GTA5.png"
+  }
+]

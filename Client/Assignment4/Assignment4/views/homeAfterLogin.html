@@ -1,0 +1,99 @@
+<div >
+    <h1 class="hello">Hello {{m_currentUserName}} !</h1>
+    <h3 class="hello" ng-show="isLoggedIn">Your last connection was on: {{m_currentDate}}</h3>
+    <br/>
+    <h1 class="headline">Top 5 movies:</h1>
+    <br/>
+    <ul>
+
+        <div ng-repeat="movie in movies ">
+            <div  class="frame">
+                <!--<div id="imageDiv">-->
+                <img ng-src="{{movie.Image}}" style="float:left ;width:100px;" />
+                <!-- </div>-->
+                <h3>&nbsp;&nbsp;{{movie.Name}}</h3>
+                <ul class = "topFive">
+                    <p><b>&nbsp;&nbsp;Price: </b>{{movie.Price | currency}}</p>
+                    <p><b>&nbsp;&nbsp;Year: </b>{{movie.Year}}</p>
+                </ul>
+                <ul >
+                    <p><b>&nbsp;&nbsp;Director: </b>{{movie.Director}}</p>
+                    <p><b>&nbsp;&nbsp;Category: </b>{{movie.Category}}</p>
+                    <!--<form ng-submit="addToCartHandler()">
+                        <input type="submit" value="Add to Cart"/>
+                    </form>-->
+                    <button class="buttonC" ng-click="addToCartHandler(movie);" ng-show="isLoggedIn">Add to Cart</button>
+
+                </ul>
+
+
+
+                <br>
+                <br>
+
+                <p><b>Description: </b>{{movie.Description}}</p>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!--<div class="remove" ng-click="removeGame(game)">x</div>-->
+            </div>
+            <br>
+        </div>
+
+
+    </ul>
+    <div ng-show="isLoggedIn">
+        <h1 class="headline">Last Month Movies:</h1>
+        <div ng-repeat="movie in lastMonthMovies " >
+
+    <br/>
+    <ul>
+
+            <div  class="frame">
+                <!--<div id="imageDiv">-->
+                <img ng-src="{{movie.Image}}" style="float:left ;width:100px;" />
+                <!-- </div>-->
+                <h3>&nbsp;&nbsp;{{movie.Name}}</h3>
+                <ul class = "topFive">
+                    <p><b>&nbsp;&nbsp;Price: </b>{{movie.Price | currency}}</p>
+                    <p><b>&nbsp;&nbsp;Year: </b>{{movie.Year}}</p>
+                </ul>
+                <ul >
+                    <p><b>&nbsp;&nbsp;Director: </b>{{movie.Director}}</p>
+                    <p><b>&nbsp;&nbsp;Category: </b>{{movie.Category}}</p>
+                    <!--<form ng-submit="addToCartHandler()">
+                        <input type="submit" value="Add to Cart"/>
+                    </form>-->
+                    <button class="buttonC" ng-click="addToCartHandler(movie);">Add to Cart</button>
+
+                </ul>
+
+
+
+                <br>
+                <br>
+
+                <p><b>Description: </b>{{movie.Description}}</p>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!--<div class="remove" ng-click="removeGame(game)">x</div>-->
+            </div>
+
+
+            <br>
+
+    </ul>
+</div>
+    </div>
+</div>

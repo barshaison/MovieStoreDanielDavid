@@ -1,0 +1,65 @@
+<div >
+
+    <h1 class="headline">My Cart:</h1>
+    <br/>
+    <div class="sortBy">
+
+        <strong id="choseCategory">Choose Category:</strong>
+        <select ng-model="selected" ng-change="selectedHandlerC()" id="catOpt" ng-options="category.CategoryName for category in categories">
+        </select>
+
+        <strong id="choseDirector">Choose Director:</strong>
+        <select ng-model="selected" ng-change="selectedHandlerD()" id="catOptD" ng-options="director.director for director in directors">
+        </select>
+    </div>
+    <ul>
+
+           <div ng-repeat="movie in movies ">
+               <div class="frame"  >
+                   <!--<div id="imageDiv">-->
+                   <img ng-src="{{movie.Image}}" style="float:left ;width:100px;" />
+                   <!-- </div>-->
+                   <h3>&nbsp;&nbsp;{{movie.Name}}</h3>
+                   <ul class = "topFive">
+                       <p><b>&nbsp;&nbsp;Price: </b>{{movie.Price | currency}}</p>
+                       <p><b>&nbsp;&nbsp;Year: </b>{{movie.Year}}</p>
+                   </ul>
+                   <ul >
+                       <p><b>&nbsp;&nbsp;Director: </b>{{movie.Director}}</p>
+                       <p><b>&nbsp;&nbsp;Category: </b>{{movie.Category}}</p>
+                       <!--<form ng-submit="addToCartHandler()">
+                           <input type="submit" value="Add to Cart"/>
+                       </form>-->
+                       <button class="buttonC" ng-click="removeFromCartHandler(movie);">Remove from Cart</button>
+
+                   </ul>
+
+
+
+                   <br>
+                   <br>
+
+                   <p><b>Description: </b>{{movie.Description}}</p>
+
+
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <!--<div class="remove" ng-click="removeGame(game)">x</div>-->
+               </div>
+               <br>
+
+           </div>
+        <label id="totalPrice">Total Price: {{totalCost | currency}}</label>
+        <br><br><br><br>
+        <div class="wrapper">
+            <button class="button" ng-click="purchaseHandler()">Purchase</button>
+        </div>
+    </ul>
+
+</div>
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 >Login</h1>
+<div class="content">
+    <form ng-submit="checkUser()">
+        <input type="text" ng-model="userName" placeholder="User Name" ng-change="unChange()" />
+        <label ng-model="UnComment" >{{UnComment}}</label>
+        <input type="password" ng-model="password" placeholder="Password" ng-change="pdChange()"/>
+        <label ng-model="pdComment" >{{pdComment}}</label>
+        <br/>
+        <br/>
+        <input type="submit"  value="Login" />
+    </form>
+
+</div>
+<div>
+    <a href="#/passwordRetrieve">Forgot Your Password?</a>
+
+</div>
+</body>
+</html>
